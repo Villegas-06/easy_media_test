@@ -1,0 +1,123 @@
+#registerForm {
+  margin-top: 15px;
+}
+
+#registerForm .form-group {
+  margin: 10px;
+}
+
+.info img {
+  width: 73.29px;
+  height: 73.97px;
+  top: 28px;
+  left: 128.86px;
+}
+
+.info h1 {
+  color: #fff;
+  font-family: Lato;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+.info h3 {
+  color: #48e3be;
+  font-family: Lato;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.info p {
+  color: #fff;
+  font-family: Lato;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+#registerForm .alert.alert-danger {
+  color: #fe4b4b;
+
+  font-family: Lato;
+  font-size: 15px;
+  font-style: normal;
+
+  background: none;
+  border: none;
+}
+
+#registerForm label {
+  color: #0e2248;
+  font-family: Lato;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  margin-top: 8px;
+}
+
+#registerForm input {
+  color: #000000;
+  font-family: Lato;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border-radius: 1rem;
+  border: 1px solid #5f5e5e;
+
+  background: #ebebeb;
+  width: 70%;
+  padding: 5px;
+  outline: none;
+}
+
+#registerForm input:focus {
+  border-bottom: 2px solid #fff;
+}
+
+#registerForm .btn-submit {
+  width: 70%;
+  height: 2rem;
+  flex-shrink: 0;
+
+  border-radius: 1.25rem;
+  background: linear-gradient(270deg, #c645a9 17.66%, #58bbdb 89.57%);
+
+  margin-top: 15px;
+
+  color: #fff;
+  border-color: #fff;
+}
+
+#registerForm #login {
+  margin-top: 10px;
+  width: 70%;
+  height: 12px;
+  flex-shrink: 0;
+
+  color: #b7b7b7;
+  font-family: Lato;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+
+  text-align: right;
+}
+
+#registerForm #login a {
+  color: #48e3be;
+  font-family: Lato;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration-line: underline;
+}

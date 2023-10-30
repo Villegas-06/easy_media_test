@@ -6,6 +6,7 @@ import { MaterialComponentsModule } from './material-components';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { AuthGuard } from './auth.guard';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -35,7 +36,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

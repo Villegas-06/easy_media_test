@@ -5,9 +5,14 @@ import { RegisterComponent } from './register/register.component';
 import { AllpostComponent } from './allpost/allpost.component';
 import { CreatepostComponent } from './createpost/createpost.component';
 import { MypostComponent } from './mypost/mypost.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  {
+    path: '',
+    redirectTo: '/login',
+    pathMatch: 'full',
+  },
   {
     path: 'login',
     component: LoginComponent,
@@ -19,14 +24,17 @@ const routes: Routes = [
   {
     path: 'all-post',
     component: AllpostComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: 'create-post',
     component: CreatepostComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: 'my-posts',
     component: MypostComponent,
+    canActivate: [AuthGuard],
   },
 ];
 

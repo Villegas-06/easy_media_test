@@ -14,4 +14,10 @@ export class NavbarComponent {
     // Verificar si la ruta actual es "login" o "register"
     return !['/login', '/register'].includes(currentRoute);
   }
+
+  logout() {
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    this.router.navigate(['/login']);
+  }
 }

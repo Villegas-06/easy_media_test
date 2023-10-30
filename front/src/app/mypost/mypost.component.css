@@ -1,0 +1,118 @@
+.info h2 {
+  color: #fff;
+  font-family: Lato;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+#messages {
+  color: #ebebeb;
+  font-family: Lato;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+#dateSelectMyPost {
+  color: #0e2248;
+  font-family: Lato;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.keyword-filter input {
+  width: 17.3125rem;
+  height: 1.6875rem;
+  flex-shrink: 0;
+
+  border-radius: 1rem;
+  border: 1px solid #5f5e5e;
+  background: #ebebeb;
+}
+
+.selectDate input {
+  width: 17.3125rem;
+  height: 1.6875rem;
+  flex-shrink: 0;
+
+  border-radius: 1rem;
+  border: 1px solid #5f5e5e;
+  background: #ebebeb;
+  margin-bottom: 20px;
+}
+
+#allPost .header {
+  flex: 0 0 auto; /* Ensures the header doesn't grow or shrink */
+  width: 100%;
+
+  border-radius: 1rem 1rem 0rem 0rem;
+  border: 1px solid #5f5e5e;
+  background: #58bcdb;
+}
+
+#allPost .header p {
+  color: #ebebeb;
+  font-family: Lato;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+#allPost .content {
+  flex: 0 0 auto; /* Ensures the header doesn't grow or shrink */
+  width: 100%;
+
+  border-radius: 0 0 1rem 1rem;
+  border: 1px solid #5f5e5e;
+  background: #666;
+  overflow-wrap: break-word;
+}
+
+#resultAll {
+  margin-top: 15px;
+}
+
+#dateAll {
+  color: #ebebeb;
+  font-family: Lato;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+
+  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-left: 20px;
+}
+
+#userAll {
+  color: #ebebeb;
+  font-family: Lato;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-left: 20px;
+}
+
+#allPost .content p {
+  color: #ebebeb;
+  font-family: Lato;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin-top: 10px;
+  margin-left: 20px;
+}

@@ -1,0 +1,21 @@
+.nav-item a {
+  color: #0e2248;
+  font-family: Lato;
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.navbar-brand {
+  color: #0e2248;
+  font-family: Lato;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.navbar-nav {
+  margin-right: auto;
+}

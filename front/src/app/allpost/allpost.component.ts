@@ -1,12 +1,8 @@
-import {
-  ChangeDetectorRef,
-  Component,
-  ViewChild,
-  AfterViewInit,
-  OnInit,
-} from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
 
 import { MatPaginator } from '@angular/material/paginator';
+
+import { PageEvent } from '@angular/material/paginator';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -14,14 +10,14 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './allpost.component.html',
   styleUrls: ['./allpost.component.css'],
 })
-export class AllpostComponent {
+export class AllpostComponent implements OnInit {
   private apiUrl = 'http://localhost:3000';
   selectedDate: Date = new Date();
   textFilter: string = '';
   messages: any[] = [];
   filteredMessages: any[] = [];
   totalMessages: number = 0;
-  pageSize: number = 10;
+  pageSize: number = 2;
   errorMessage: string = '';
   showingPostsMessage: string = 'Paginator not initialized';
   keywordFilter: string = '';
@@ -73,10 +69,11 @@ export class AllpostComponent {
     const startIndex = this.paginator.pageIndex * this.pageSize + 1;
     const endIndex = Math.min(
       startIndex + this.pageSize - 1,
-      this.totalMessages
+      this.filteredMessages.length // Usar filteredMessages en lugar de messages
     );
 
-    if (this.totalMessages === 0) {
+    if (this.filteredMessages.length === 0) {
+      // Usar filteredMessages en lugar de messages
       this.showingPostsMessage = 'No Posts to Show';
     } else {
       this.showingPostsMessage = `Showing ${startIndex}/${endIndex} Posts`;
@@ -126,20 +123,25 @@ export class AllpostComponent {
     this.getMessages(this.selectedDate, '');
   }
 
-  onPageChange(event: MatPaginator) {
+  onPageChange(event: PageEvent) {
     if (this.paginator) {
       this.paginator.pageIndex = event.pageIndex;
       this.applyFilter();
+      this.updateShowingPostsMessage();
       this.changeDetectorRef.detectChanges();
     }
   }
 
   ngOnInit() {
     if (!this.paginator) {
-      setTimeout(() => this.getMessages(this.selectedDate, ''), 100);
+      setTimeout(() => {
+        this.getMessages(this.selectedDate, '');
+        this.applyFilter();
+      }, 100);
       return;
     }
 
     this.getMessages(this.selectedDate, '');
+    this.applyFilter();
   }
 }

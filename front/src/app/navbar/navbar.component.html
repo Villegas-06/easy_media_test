@@ -1,8 +1,46 @@
-<nav *ngIf="shouldShowNavbar()">
-  <ul>
-    <li><a routerLink="/create-post">Create Publication</a></li>
-    <li><a routerLink="/my-posts">My Publications</a></li>
-    <li><a routerLink="/all-post">See All Publications</a></li>
-    <li><a routerLink="/all-post">Logout</a></li>
-  </ul>
+<nav
+  *ngIf="shouldShowNavbar()"
+  class="navbar navbar-expand-lg navbar-light bg-light"
+  style="margin-bottom: 3%"
+>
+  <div>
+    <img
+      src="assets/images/easy_media_logo.png"
+      alt="brand"
+      style="margin-left: 5px"
+    />
+    <a
+      class="navbar-brand"
+      routerLink="/my-posts"
+      style="margin-left: 10px; margin-top: 10px"
+    >
+      Easy Media
+    </a>
+  </div>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNav"
+    style="margin-right: 10px"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto justify-content-end">
+      <!-- Add justify-content-end class -->
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/create-post">Create Publication</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/my-posts">My Publications</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/all-post">See All Publications</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="logout()">Logout</a>
+      </li>
+    </ul>
+  </div>
 </nav>

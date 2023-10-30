@@ -1,44 +1,53 @@
-<h2>Mis Mensajes</h2>
-<mat-form-field>
+<div
+  class="info text-center d-flex flex-column justify-content-center align-items-center"
+>
+  <h2>My Publications</h2>
+</div>
+
+<div class="row">
+  <div class="col-sm-6"><p id="dateSelectMyPost">Date Select</p></div>
+
+  <div class="col-sm-6" id="messages">
+    <div class="showing-message">
+      {{ showingPostsMessage }}
+    </div>
+
+    <div *ngIf="errorMessage !== ''" class="error-message">
+      {{ errorMessage }}
+    </div>
+  </div>
+</div>
+
+<div class="selectDate">
   <input
     matInput
     [matDatepicker]="picker"
-    placeholder="Selecciona una fecha"
+    placeholder="Select a date"
     [(ngModel)]="selectedDate"
     (dateChange)="onDateChange()"
   />
   <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
   <mat-datepicker #picker></mat-datepicker>
-</mat-form-field>
-
-<div class="showing-message">
-  {{ showingPostsMessage }}
 </div>
-
-<div *ngIf="errorMessage !== ''" class="error-message">
-  {{ errorMessage }}
-</div>
-
-<div *ngFor="let message of messages; let i = index">
-  <mat-card class="example-card">
-    <mat-card-header>
-      <mat-card-title>{{ message.postTitle }}</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
+<div *ngFor="let message of filteredMessages; let i = index" id="resultAll">
+  <div id="allPost">
+    <div class="header">
+      <p>{{ message.postTitle }}</p>
+    </div>
+    <div class="content">
       <p>
         {{ message.postMessage }}
       </p>
-    </mat-card-content>
-    <mat-card-content>
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-5" id="dateAll">
           {{ message.datetime | date : "h:mm a dd/MM/yy" }}
         </div>
-
-        <div class="col-md-6">{{ message.username }}</div>
+        <div class="col-md-5" id="userAll">
+          {{ message.username }}
+        </div>
       </div>
-    </mat-card-content>
-  </mat-card>
+    </div>
+  </div>
 </div>
 
 <mat-paginator [length]="totalMessages" [pageSize]="pageSize"></mat-paginator>
