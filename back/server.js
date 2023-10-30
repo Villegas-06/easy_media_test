@@ -20,10 +20,10 @@ app.use('/api/create-post', newPost);
 app.use('/api/my-post', myPost);
 
 // Conexion a la base de datos MongoDB
+
 mongoose.connect(config.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('Conexión a MongoDB exitosa'))
     .catch(err => console.log(err));
-
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
