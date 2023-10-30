@@ -42,9 +42,9 @@ Asegúrate de tener Node.js y npm (el administrador de paquetes de Node.js) inst
 
 3.  **Accede al front del proyecto:**
 
-    Vuelve al directorio raíz del proyecto:
+    En otra terminal ve al directorio del proyecto que acabas de clonar y escribe el siguiente comando:
 
-    cd ..
+    cd easy_media_test
 
     3.1 **Accede a la carpeta del frontend:**
 
@@ -60,7 +60,7 @@ Asegúrate de tener Node.js y npm (el administrador de paquetes de Node.js) inst
 
     3.3 **Inicia la aplicación Angular:**
 
-        En una nueva terminal, ve al directorio del cliente Angular:
+        Ejecuta el siguiente comando para iniciar el servidor Angular:
 
         ng serve
 
