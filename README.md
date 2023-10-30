@@ -60,9 +60,15 @@ Antes de continuar con los pasos de instalación espera a que Node.js y git sean
 
     3.2 **Instala las dependencias del cliente Angular:**
 
-        Ejecuta el siguiente comando para instalar las dependencias del cliente Angular:
+        Ejecuta el siguiente comando para instalar las dependencias de Node:
 
         npm install
+
+    3.3 **Añade angular:**
+
+        Ejecuta el siguiente compando para instalar las dependencias de angular
+
+        npm i -g angular@/cli
 
     3.3 **Inicia la aplicación Angular:**
 
