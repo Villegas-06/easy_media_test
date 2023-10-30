@@ -4,7 +4,7 @@ Este proyecto combina Angular y Express para crear una aplicación web. A contin
 
 ## Requisitos previos
 
-Asegúrate de tener Node.js y npm (el administrador de paquetes de Node.js) instalados en tu computadora. Puedes descargarlos desde [nodejs.org](https://nodejs.org/).
+Asegúrate de tener Node.js y npm (el administrador de paquetes de Node.js) instalados en tu computadora. Puedes descargarlos desde [nodejs.org](https://nodejs.org/). Se recomienda instalar la versión LTS
 
 ## Pasos de instalación
 
